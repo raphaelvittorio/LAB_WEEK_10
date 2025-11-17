@@ -3,10 +3,7 @@ package com.example.lab_week_10
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.lab_week_10.viewmodels.TotalViewModel
 
@@ -24,6 +21,8 @@ class MainActivity : AppCompatActivity() {
             getString(R.string.text_total, total)
     }
     private fun prepareViewModel(){
+        // Observe the LiveData object. Whenever the value of the LiveData object changes,
+        // the updateText() is called with the new value as the parameter.
         viewModel.total.observe(this) { total ->
             updateText(total)
         }
