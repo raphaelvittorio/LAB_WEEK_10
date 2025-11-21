@@ -10,6 +10,7 @@ import com.example.lab_week_10.database.Total
 import com.example.lab_week_10.database.TotalDatabase
 import com.example.lab_week_10.viewmodels.TotalViewModel
 
+
 class MainActivity : AppCompatActivity() {
     private val db by lazy { prepareDatabase() }
     private val viewModel by lazy {
